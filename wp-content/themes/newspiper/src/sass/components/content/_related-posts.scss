@@ -1,0 +1,22 @@
+@media (min-width: 40rem) and (max-width: 60rem) {
+
+	.has-sidebar {
+
+		.related-posts {
+
+			.related-post {
+				flex: 0 0 45%;
+			}
+		}
+	}
+}
+
+@media (min-width: 60rem) {
+
+	.related-posts {
+
+		.related-post {
+			flex: 0 0 30%;
+		}
+	}
+}

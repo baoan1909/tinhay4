@@ -1,0 +1,1 @@
+(function(){const buttons=document.querySelectorAll('.wp-block-button__link');for(let i=0;i<buttons.length;i++){if(buttons[i].className.indexOf('wp-element-button')==-1){buttons[i].className+=' wp-element-button';}}}());

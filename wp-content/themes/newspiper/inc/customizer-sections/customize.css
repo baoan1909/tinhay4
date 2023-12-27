@@ -1,0 +1,17 @@
+.go-pro-section {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+.control-section-newspiper-pro-section .accordion-section-title .button {
+    text-align: center;
+    font-weight: 500;
+    background: #ff7f7f;
+    color: #000;
+    border-color: #ff7f7f;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 14px;
+    transition: .5s ease-in;
+}

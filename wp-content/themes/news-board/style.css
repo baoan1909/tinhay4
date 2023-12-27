@@ -1,0 +1,273 @@
+/**
+Theme Name: News Board
+Theme URI: https://ascendoor.com/themes/news-board/
+Author: Ascendoor
+Author URI: https://ascendoor.com/
+Version: 1.0.1
+Requires PHP: 7.4
+Tested up to: 6.2
+Requires at least: 5.0
+Template: flash-news
+Text Domain: news-board
+Description: News Board ( child theme of Flash News ) is a WordPress magazine theme that offers a fast, clean, and modern design, making it an ideal choice for dynamic news, publishers, blogs, and online magazines. With its widgetized and customizable features, users can easily manage content using widgets and the live WordPress customizer. The theme is completely responsive, ensuring that it looks great on any screen size, and is SEO-friendly, minimal, and lightweight, making it an excellent starting point for building a powerful and unique website. News Board also comes with pre-built demos that make setup quick and easy. Its flexibility and responsiveness make it compatible with all browsers and screen resolutions. The theme is optimized for speed and performance, making it a wise choice for those who prioritize SEO practices. Check the theme documentation at: https://docs.ascendoor.com/docs/news-board/ and demo at: https://demos.ascendoor.com/news-board/
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: custom-background, custom-logo, custom-colors, custom-menu, featured-images, threaded-comments, translation-ready, theme-options, footer-widgets, full-width-template, left-sidebar, right-sidebar, news, blog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+News Board is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+:root {
+	--primary-color: #1093ea;
+	--header-text-color: #1093ea;
+}
+
+/* search input */
+header .middle-bottom-header .middle-header-part .middle-header-wrapper .middle-header-navigation .bottom-header-right-part .header-search .header-search-wrap .header-search-form {
+	border-radius: 10px;
+}
+
+.wp-block-search .wp-block-search__input,
+header .middle-bottom-header .middle-header-part .middle-header-wrapper .middle-header-navigation .bottom-header-right-part .header-search .header-search-wrap .header-search-form .search-form label input {
+	border-radius: 5px 0 0 5px;
+}
+
+.wp-block-search .wp-block-search__button,
+header .middle-bottom-header .middle-header-part .middle-header-wrapper .middle-header-navigation .bottom-header-right-part .header-search .header-search-wrap .header-search-form .search-form input.search-submit {
+	border-radius: 0 5px 5px 0;
+}
+
+/* search input */
+
+/* breaking news */
+.flash-news .flash-news-wrapper .mag-post-single .mag-post-img>a img {
+	border-radius: var(--border-radius-all);
+}
+
+.flash-news .flash-news-wrapper .mag-post-single .mag-post-img .flash-no {
+	right: 7px;
+	top: 7px;
+	line-height: 0;
+	border: 1px solid #fff;
+}
+
+/* breaking news */
+
+.banner-section.banner-style-4 .banner-section-wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+	.banner-section.banner-style-4 .banner-section-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.banner-section.banner-style-4 .banner-section-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+.banner-section.banner-style-4 .banner-section-wrapper .slider-part:nth-child(1) {
+	grid-column: span 2;
+	grid-row: span 2;
+	width: 100%;
+}
+
+.banner-section.banner-style-4 .banner-section-wrapper .slider-part:nth-child(1) .mag-post-single {
+	min-height: 460px;
+}
+
+@media (max-width: 480px) {
+	.banner-section.banner-style-4 .banner-section-wrapper .slider-part:nth-child(1) .mag-post-single {
+		min-height: 350px;
+	}
+}
+
+.banner-section.banner-style-4 .banner-section-wrapper .slider-part:nth-child(1) .mag-post-single .mag-post-detail .mag-post-title {
+	font-size: var(--font-size-md);
+}
+
+.banner-section.banner-style-4 .banner-section-wrapper .banner-gird-single:nth-child(2) {
+	grid-column: span 2;
+}
+
+/* social widget */
+.widget_flash_news_social_icons ul.social-links li a,
+.widget_flash_news_social_icons ul.social-links li a::before {
+	border-radius: 5px;
+}
+
+/* social widget */
+
+/* tile widget */
+.magazine-tile-section .magazine-tile-section-wrapper {
+	display: grid;
+	grid-gap: 30px;
+}
+
+aside#secondary.widget-area .magazine-tile-section .magazine-tile-section-wrapper,
+.secondary-widgets-section .magazine-tile-section .magazine-tile-section-wrapper,
+.site-footer .magazine-tile-section .magazine-tile-section-wrapper {
+	grid-gap: 10px;
+}
+
+.magazine-tile-section.style-2 .magazine-tile-section-wrapper {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+@media (max-width: 767px) {
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single {
+	grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single {
+		grid-column: span 1;
+	}
+}
+
+.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child {
+	grid-row: span 2;
+	grid-column: span 3;
+}
+
+@media (max-width: 480px) {
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+}
+
+@media (min-width: 481px) {
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child .mag-post-detail .mag-post-title {
+		font-size: var(--font-size-md);
+	}
+}
+
+.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3),
+.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) {
+	grid-column: span 3;
+}
+
+@media (max-width: 480px) {
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3),
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) {
+		grid-column: span 1;
+	}
+}
+
+@media (min-width: 481px) {
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3) .mag-post-detail .mag-post-title,
+	.magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) .mag-post-detail .mag-post-title {
+		font-size: var(--font-size-md);
+	}
+}
+
+.main-widget-section-wrap:not(.no-frontpage-sidebar):not(.main-full-width) .primary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+@media (max-width: 767px) {
+	.main-widget-section-wrap:not(.no-frontpage-sidebar):not(.main-full-width) .primary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.main-widget-section-wrap:not(.no-frontpage-sidebar):not(.main-full-width) .primary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.main-widget-section-wrap:not(.no-frontpage-sidebar):not(.main-full-width) .primary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single {
+		grid-column: span 1;
+	}
+}
+
+@media (max-width: 480px) {
+	.main-widget-section-wrap:not(.no-frontpage-sidebar):not(.main-full-width) .primary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+}
+
+@media (max-width: 480px) {
+	.main-widget-section-wrap:not(.no-frontpage-sidebar):not(.main-full-width) .primary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3),
+	.main-widget-section-wrap:not(.no-frontpage-sidebar):not(.main-full-width) .primary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) {
+		grid-column: span 1;
+	}
+}
+
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper,
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper,
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper {
+	grid-template-columns: repeat(1, 1fr);
+}
+
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single,
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single,
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single {
+	grid-column: span 1;
+}
+
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child,
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child,
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child {
+	grid-row: span 1;
+	grid-column: span 1;
+}
+
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child .mag-post-detail .mag-post-title,
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child .mag-post-detail .mag-post-title,
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:first-child .mag-post-detail .mag-post-title {
+	font-size: var(--font-size-base);
+}
+
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3),
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2),
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3),
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2),
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3),
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) {
+	grid-column: span 1;
+}
+
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3) .mag-post-detail .mag-post-title,
+aside#secondary.widget-area .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) .mag-post-detail .mag-post-title,
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3) .mag-post-detail .mag-post-title,
+.footer-widget-single .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) .mag-post-detail .mag-post-title,
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(3) .mag-post-detail .mag-post-title,
+.secondary-widgets-section .magazine-tile-section.style-2 .magazine-tile-section-wrapper .mag-post-single:nth-child(2) .mag-post-detail .mag-post-title {
+	font-size: var(--font-size-base);
+}
+/* tile widget */
+
+/* scroll to top */
+a.magazine-scroll-to-top {
+	border-radius: 10px;
+}
+
+/* scroll to top */

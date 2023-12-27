@@ -1,0 +1,9 @@
+// Transparent header bug fix
+@media (max-width: 781px) {
+
+	.has-transparent-header .entry-content > .wp-block-group:nth-child(1) .wp-block-columns,
+	.has-transparent-header .entry-content > .wp-block-cover:nth-child(1) .wp-block-columns {
+		padding-top: 25%; // failsafe no js
+		padding-top: calc(0.5rem + var(--p-header-height));
+	}
+}

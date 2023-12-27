@@ -1,0 +1,4 @@
+li#accordion-section-flash_news_posts_list_section,
+li#accordion-section-upsell_section {
+    display: none !important;
+}
